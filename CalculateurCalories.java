@@ -34,12 +34,49 @@ public class CalculateurCalories {
         System.out.println();
         System.out.println("=== Calculateur Calories ===");
         System.out.println("Sexe : " + sexe);
-        System.out.println("Âge : " + age + " ans");
-        System.out.println("Poids : " + poids + " kg");
-        System.out.println("Taille : " + taille + " cm");
+        System.out.print("Âge : " + age + " ans");
+        System.out.print("Poids : " + poids + " kg");
+        System.out.print("Taille : " + taille + " cm");
 
         double metabolisme = calculerMetabolismeBase(sexe, age, poids, taille);
         System.out.printf("Métabolisme de base : %.0f kcal/jour%n", metabolisme);
+
+        System.out.println("Niveau d'activité :");
+        System.out.println("1. Sédentaire (peu ou pas d’exercice)");
+        System.out.println("2. Légèrement actif (1 à 3 séances par semaine)");
+        System.out.println("3. Modérément actif (3 à 5 séances par semaine)");
+        System.out.println("4. Très actif (6 à 7 séances par semaine) ");
+        System.out.println("5. Extrêmement actif (sport intense, travail physique)");
+        System.out.print("Votre choix : ");
+       
+        int choix = scanner.nextInt();
+
+        double coefficient;
+
+        switch (choix) {
+            case 1:
+                coefficient = 1.2;
+                break;
+            case 2:
+                coefficient = 1.375;
+                break;
+            case 3:
+                coefficient = 1.55;
+                break;
+            case 4: 
+                coefficient = 1.725;
+                break;
+            case 5:
+                coefficient = 1.9;
+                break;
+            default:
+                System.out.println("Erreur : choisissez un niveau entre 1 et 5.");
+                scanner.close();
+                return;
+        }
+
+        double besoins = metabolisme * coefficient;
+        System.out.printf("Besoins quotidiens : %.0f kcal/jour%n", besoins);
 
         scanner.close();
     }
