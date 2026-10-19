@@ -26,6 +26,10 @@ L'utilisateur saisit son poids et sa taille. Le programme calcule l'IMC, affiche
 
 Un menu permet d'enchaîner les conversions de température (°C ↔ °F), de poids (kg ↔ lb) et de glycémie (mg/dL ↔ mmol/L), jusqu'à ce que l'utilisateur quitte.
 
+## Projet 3 : Calculateur des besoins caloriques
+
+L'utilisateur saisit son sexe, son âge, son poids et sa taille. Le programme calcule son métabolisme de base avec la formule de Harris-Benedict, puis ses besoins caloriques quotidiens en fonction de son niveau d'activité physique.
+
 ## Lancer un programme
 
 Prérequis : Java 21 ou plus récent.
