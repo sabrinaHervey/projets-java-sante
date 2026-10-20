@@ -37,8 +37,15 @@ public class SuiviTension {
 
         // ===== 4. Affichage des mesures =====
         for (int i = 0; i < systoliques.length; i++) {
-            // À TOI : ajoute la diastolique pour afficher "Jour 1 : 120/80 mmHg"
-            System.out.println("Jour " + (i + 1) + " : " + systoliques[i] + "/" + diastoliques[i] + " mmHg");
+            System.out.print("Jour " + (i + 1) + " : " + systoliques[i] + "/" + diastoliques[i] + " mmHg - ");
+
+            if (systoliques[i] >= 140 || diastoliques[i] >= 90) {
+                System.out.println("Tension élevée");
+            } else if (systoliques[i] < 90 || diastoliques[i] < 60) {
+                System.out.println("Tension basse");
+            } else {
+                System.out.println("Tension normale");
+            }
         }
 
         // ===== 5. Statistiques (systolique) =====
@@ -46,7 +53,7 @@ public class SuiviTension {
         for (int i = 0; i < systoliques.length; i++) {
             somme = somme + systoliques[i];
         }
-        
+
         System.out.println();
         System.out.println("=== Statistiques ===");
         double moyenne = (double) somme / systoliques.length;
