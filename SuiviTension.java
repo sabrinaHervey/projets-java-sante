@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SuiviTension {
@@ -5,75 +6,31 @@ public class SuiviTension {
     public static void main(String[] args) {
         Scanner clavier = new Scanner(System.in);
 
-        // ===== 1. Nombre de mesures =====
-        System.out.print("Combien de mesures voulez-vous saisir ? ");
+        // ===== 1. Création des listes =====
+        ArrayList<Integer> systoliques = new ArrayList<>();
+        ArrayList<Integer> diastoliques = new ArrayList<>();
 
-        if (!clavier.hasNextInt()) {
-            System.out.println("Erreur : veuillez saisir un nombre entier.");
-            clavier.close();
-            return;
-        }
+        // ===== 2. Saisie des mesures =====
+        System.out.println("Saisissez vos mesures (tapez 0 pour terminer).");
 
-        int nombresMesures = clavier.nextInt();
+        while (true) {
+            int jour = systoliques.size() + 1;
 
-        if (nombresMesures <= 0) {
-            System.out.println("Erreur : le nombre de mesures doit être supérieur à 0.");
-            clavier.close();
-            return;
-        }
+            System.out.print("Jour " + jour + " - systolique (mmHg) : ");
+            int systolique = clavier.nextInt();
 
-        // ===== 2. Création des tableaux =====
-        int[] systoliques = new int[nombresMesures];
-        int[] diastoliques = new int[nombresMesures];
-
-        // ===== 3. Saisie des mesures =====
-        for (int i = 0; i < systoliques.length; i++) {
-            System.out.print("Jour " + (i + 1) + " - systolique (mmHg) : ");
-            systoliques[i] = clavier.nextInt();
-
-            System.out.print("Jour " + (i + 1) + " - diastolique (mmHg) : ");
-            diastoliques[i] = clavier.nextInt();
-        }
-
-        // ===== 4. Affichage des mesures =====
-        for (int i = 0; i < systoliques.length; i++) {
-            System.out.print("Jour " + (i + 1) + " : " + systoliques[i] + "/" + diastoliques[i] + " mmHg - ");
-
-            if (systoliques[i] >= 140 || diastoliques[i] >= 90) {
-                System.out.println("Tension élevée");
-            } else if (systoliques[i] < 90 || diastoliques[i] < 60) {
-                System.out.println("Tension basse");
-            } else {
-                System.out.println("Tension normale");
+            if (systolique == 0) {
+                break;
             }
+
+            System.out.print("Jour " + jour + " - diastolique (mmHg) : ");
+            int diastolique = clavier.nextInt();
+
+            diastoliques.add(diastolique);
+            systoliques.add(systolique);
         }
 
-        // ===== 5. Statistiques (systolique) =====
-        int somme = 0;
-        for (int i = 0; i < systoliques.length; i++) {
-            somme = somme + systoliques[i];
-        }
-
-        System.out.println();
-        System.out.println("=== Statistiques ===");
-        double moyenne = (double) somme / systoliques.length;
-        System.out.printf("Moyenne systolique : %.1f mmHg%n", moyenne);
-
-        int maximum = systoliques[0];
-        for (int i = 1; i < systoliques.length; i++) {
-            if (systoliques[i] > maximum) {
-                maximum = systoliques[i];
-            }
-        }
-        System.out.println("Maximum systolique : " + maximum + " mmHg");
-
-        int minimum = systoliques[0];
-        for (int i = 1; i < systoliques.length; i++) {
-            if (systoliques[i] < minimum) {
-                minimum = systoliques[i];
-            }
-        }
-        System.out.println("Minimum systolique : " + minimum + " mmHg");
+        System.out.println(systoliques.size() + " mesure(s) enregistrée(s).");
 
         clavier.close();
     }
