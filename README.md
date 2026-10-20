@@ -8,8 +8,8 @@ Mon parcours d'apprentissage Java : 11 projets progressifs appliqués au secteur
 |---|---|---|---|
 | 1 | Calculateur d'IMC | variables, conditions, `Scanner`, validation | Terminé |
 | 2 | Convertisseur d'unités médicales | méthodes, `switch`, boucles | Terminé |
-| 3 | Calculateur de besoins caloriques | chaînes de caractères | En cours |
-| 4 | Suivi de tension artérielle | tableaux, `ArrayList` | À venir |
+| 3 | Calculateur de besoins caloriques | chaînes de caractères | Terminé |
+| 4 | Suivi de tension artérielle | tableaux, `ArrayList` | Treminé |
 | 5 | Gestionnaire de patients | classes et objets | À venir |
 | 6 | Rappel de médicaments | dates et heures | À venir |
 | 7 | Prise de rendez-vous | relations entre classes, `HashMap` | À venir |
@@ -29,6 +29,10 @@ Un menu permet d'enchaîner les conversions de température (°C ↔ °F), de po
 ## Projet 3 : Calculateur des besoins caloriques
 
 L'utilisateur saisit son sexe, son âge, son poids et sa taille. Le programme calcule son métabolisme de base avec la formule de Harris-Benedict, puis ses besoins caloriques quotidiens en fonction de son niveau d'activité physique.
+
+## Projet 4 : Suivi Tension artérielle
+
+L'utilisateur peut suivre sa tension artérielle avec un programme qui lui permet de saisir autant de mesures qu'il le souhaite. Pour chaque mesure, le programme indique si la tension est normale, élevée ou basse, puis affiche la moyenne, le maximum et le minimum de la pression systolique.
 
 ## Lancer un programme
 
