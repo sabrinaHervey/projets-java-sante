@@ -4,7 +4,7 @@ public class GestionPatients {
         
         Patient p1 = new Patient("Marie", "Dupont", 45, "A+");
         Patient p2 = new Patient("Lucas", "Martin", 32, "O-");
-        Patient p3 = new Patient("Luce", "Jean", 56, "A+");
+        Patient p3 = new Patient("Luce", "Jean", 56, "B+");
 
         p1.afficher();
         p2.afficher();
