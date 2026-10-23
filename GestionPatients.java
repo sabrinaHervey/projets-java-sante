@@ -43,11 +43,24 @@ public class GestionPatients {
                     System.out.print("Groupe sanguin : ");
                     String groupeSanguin = scanner.next();
 
-                    patients.add(new Patient(nom, prenom, age, groupeSanguin));
+                    patients.add(new Patient(prenom, nom, age, groupeSanguin));
                     System.out.println("Patient ajouté");
                     break;
                 case 3:
-                    System.out.println("Fonctionnalité à venir.");
+                    System.out.print("Nom à rechercher : ");
+                    String nomRecherche = scanner.next();
+                    boolean trouve = false;
+
+                    for (Patient p : patients) {
+                        if (p.getNom().equalsIgnoreCase(nomRecherche)) {
+                            p.afficher();
+                            trouve = true;
+                        }
+                    }
+                    if (!trouve) {
+                        System.out.println("Aucun patient trouvé.");
+                    }
+
                     break;
                 case 4:
                     System.out.println("Fonctionnalité à venir.");
