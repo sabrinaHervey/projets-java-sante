@@ -21,12 +21,12 @@ public class GestionPatients {
             System.out.println("3. Rechercher un patient");
             System.out.println("4. Supprimer un patient");
             System.out.println("0. Quitter");
-            System.out.print("Votre choix : ");
+            System.out.println("Votre choix : ");
 
             choix = scanner.nextInt();
 
             switch (choix) {
-                case 1: 
+                case 1:
                     for (Patient p : patients) {
                         p.afficher();
                     }
@@ -34,7 +34,17 @@ public class GestionPatients {
                     break;
 
                 case 2:
-                    System.out.println("Fonctionnalité à venir.");
+                    System.out.print("Nom : ");
+                    String nom = scanner.next();
+                    System.out.print("Prenom : ");
+                    String prenom = scanner.next();
+                    System.out.print("Âge : ");
+                    int age = scanner.nextInt();
+                    System.out.print("Groupe sanguin : ");
+                    String groupeSanguin = scanner.next();
+
+                    patients.add(new Patient(nom, prenom, age, groupeSanguin));
+                    System.out.println("Patient ajouté");
                     break;
                 case 3:
                     System.out.println("Fonctionnalité à venir.");
