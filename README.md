@@ -9,9 +9,9 @@ Mon parcours d'apprentissage Java : 11 projets progressifs appliqués au secteur
 | 1 | Calculateur d'IMC | variables, conditions, `Scanner`, validation | Terminé |
 | 2 | Convertisseur d'unités médicales | méthodes, `switch`, boucles | Terminé |
 | 3 | Calculateur de besoins caloriques | chaînes de caractères | Terminé |
-| 4 | Suivi de tension artérielle | tableaux, `ArrayList` | Treminé |
-| 5 | Gestionnaire de patients | classes et objets | À venir |
-| 6 | Rappel de médicaments | dates et heures | À venir |
+| 4 | Suivi de tension artérielle | tableaux, `ArrayList` | Terminé |
+| 5 | Gestionnaire de patients | classes et objets | Terminé |
+| 6 | Rappel de médicaments | dates et heures | En cours |
 | 7 | Prise de rendez-vous | relations entre classes, `HashMap` | À venir |
 | 8 | Carnet de santé | fichiers, exceptions | À venir |
 | 9 | Triage aux urgences | `PriorityQueue`, `Comparable` | À venir |
@@ -33,6 +33,10 @@ L'utilisateur saisit son sexe, son âge, son poids et sa taille. Le programme ca
 ## Projet 4 : Suivi Tension artérielle
 
 L'utilisateur peut suivre sa tension artérielle avec un programme qui lui permet de saisir autant de mesures qu'il le souhaite. Pour chaque mesure, le programme indique si la tension est normale, élevée ou basse, puis affiche la moyenne, le maximum et le minimum de la pression systolique.
+
+## Projet 5 : Gestionnaire de patients
+
+Un menu permet de gérer une liste de patients fictifs : les afficher, en ajouter, rechercher un patient par son nom et en supprimer un. Chaque patient est représenté par un objet de la classe `Patient`, dont les données sont protégées : par exemple, un âge négatif ou supérieur à 130 ans est refusé.
 
 ## Lancer un programme
 
