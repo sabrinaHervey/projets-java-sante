@@ -36,7 +36,7 @@ public class GestionPatients {
                 case 2:
                     System.out.print("Nom : ");
                     String nom = scanner.next();
-                    System.out.print("Prenom : ");
+                    System.out.print("Prénom : ");
                     String prenom = scanner.next();
                     System.out.print("Âge : ");
                     int age = scanner.nextInt();
@@ -63,7 +63,24 @@ public class GestionPatients {
 
                     break;
                 case 4:
-                    System.out.println("Fonctionnalité à venir.");
+                    System.out.print("Prénom du patient à supprimer : ");
+                    String prenomSuppr = scanner.next();
+                    Patient aSupprimer = null;
+                    System.out.print("Nom du patient à supprimer : ");
+                    String nomSuppr = scanner.next();                    
+
+                    for (Patient p : patients) {
+                        if (p.getPrenom().equalsIgnoreCase(prenomSuppr)&&(p.getNom().equalsIgnoreCase(nomSuppr))) {
+                            aSupprimer = p;
+                        }
+                    }
+
+                    if (aSupprimer == null) {
+                        System.out.println("Aucun patient touvé.");
+                    } else {
+                        patients.remove(aSupprimer);
+                        System.out.println("Patient supprimé.");
+                    }
                     break;
                 case 0:
                     System.out.println("Au revoir ! ");
