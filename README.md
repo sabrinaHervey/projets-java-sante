@@ -11,7 +11,7 @@ Mon parcours d'apprentissage Java : 11 projets progressifs appliqués au secteur
 | 3 | Calculateur de besoins caloriques | chaînes de caractères | Terminé |
 | 4 | Suivi de tension artérielle | tableaux, `ArrayList` | Terminé |
 | 5 | Gestionnaire de patients | classes et objets | Terminé |
-| 6 | Rappel de médicaments | dates et heures | En cours |
+| 6 | Rappel de médicaments | dates et heures | Terminé |
 | 7 | Prise de rendez-vous | relations entre classes, `HashMap` | À venir |
 | 8 | Carnet de santé | fichiers, exceptions | À venir |
 | 9 | Triage aux urgences | `PriorityQueue`, `Comparable` | À venir |
@@ -37,6 +37,12 @@ L'utilisateur peut suivre sa tension artérielle avec un programme qui lui perme
 ## Projet 5 : Gestionnaire de patients
 
 Un menu permet de gérer une liste de patients fictifs : les afficher, en ajouter, rechercher un patient par son nom et en supprimer un. Chaque patient est représenté par un objet de la classe `Patient`, dont les données sont protégées : par exemple, un âge négatif ou supérieur à 130 ans est refusé.
+
+## Projet 6 : Rappel de médicaments
+
+## Projet 6 : Rappel de médicaments
+
+Un programme permettant aux patients de suivre l'heure de prise de leurs médicaments. Chaque médicament est enregistré avec son dosage et ses horaires de prise. À partir de l'heure actuelle, le programme affiche les prochaines prises de la journée, ou indique qu'il n'en reste plus.
 
 ## Lancer un programme
 
