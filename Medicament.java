@@ -8,7 +8,12 @@ public class Medicament {
 
     private ArrayList<LocalTime> heuresPrise;
 
-    public String getNomMedicament() {
+
+    public ArrayList<LocalTime> getHeuresPrise() {
+        return heuresPrise;
+    }
+
+    public String getNomMedicament() { //getter
         return nomMedicament;
     }
 
@@ -22,7 +27,7 @@ public class Medicament {
         this.heuresPrise = new ArrayList<>();
     }
 
-    public void ajouterHeure(LocalTime heure) {
+    public void ajouterHeure(LocalTime heure) { //setter
         this.heuresPrise.add(heure);
     }
 
