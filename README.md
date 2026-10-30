@@ -40,8 +40,6 @@ Un menu permet de gérer une liste de patients fictifs : les afficher, en ajoute
 
 ## Projet 6 : Rappel de médicaments
 
-## Projet 6 : Rappel de médicaments
-
 Un programme permettant aux patients de suivre l'heure de prise de leurs médicaments. Chaque médicament est enregistré avec son dosage et ses horaires de prise. À partir de l'heure actuelle, le programme affiche les prochaines prises de la journée, ou indique qu'il n'en reste plus.
 
 ## Lancer un programme
