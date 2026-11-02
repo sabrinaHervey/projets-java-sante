@@ -12,11 +12,12 @@ Mon parcours d'apprentissage Java : 11 projets progressifs appliqués au secteur
 | 4 | Suivi de tension artérielle | tableaux, `ArrayList` | Terminé |
 | 5 | Gestionnaire de patients | classes et objets | Terminé |
 | 6 | Rappel de médicaments | dates et heures | Terminé |
-| 7 | Prise de rendez-vous | relations entre classes, `HashMap` | À venir |
-| 8 | Carnet de santé | fichiers, exceptions | À venir |
-| 9 | Triage aux urgences | `PriorityQueue`, `Comparable` | À venir |
-| 10 | Stock de pharmacie | héritage, interfaces, base de données | À venir |
-| 11 | Interface graphique | JavaFX | À venir |
+| 7 | Tests unitaires | Maven, JUnit | A venir |
+| 8 | Prise de rendez-vous | relations entre classes, `HashMap` | À venir |
+| 9 | Carnet de santé | fichiers, exceptions | À venir |
+| 10 | Triage aux urgences | `PriorityQueue`, `Comparable` | À venir |
+| 11 | Stock de pharmacie | héritage, interfaces, base de données | À venir |
+| 12 | Interface graphique | JavaFX | À venir |
 
 ## Projet 1 : Calculateur d'IMC
 
