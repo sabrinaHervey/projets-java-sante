@@ -2,6 +2,23 @@ import java.util.Scanner;
 
 public class CalculateurIMC {
 
+    public static double calculerIMC(double poids, double taille) {
+
+        return poids / (taille * taille);
+    }
+
+    public static String categorieIMC(double imc) {
+        if (imc < 18.5) {
+            return "Insuffisance pondérale";
+        } else if (imc < 25) {
+            return "Corpulence normale";
+        } else if (imc <30) {
+            return "Surpoids";
+        } else {
+            return "Obésité";
+        }     
+    }
+
     public static void main(String[] args) {
         Scanner clavier = new Scanner(System.in);
 
@@ -23,11 +40,10 @@ public class CalculateurIMC {
             return;
         }
 
-        double imc = poids / (taille * taille);
-
+        double imc = calculerIMC(poids, taille);
         System.out.printf("Votre IMC est de : %.1f%n" , imc);
-
-        if (imc < 18.5) {
+        System.out.println(categorieIMC(imc));
+/*         if (imc < 18.5) {
             System.out.println("Insuffisance pondérale");
         } else if (imc < 25) {
             System.out.println("Corpulence normale");
@@ -35,7 +51,7 @@ public class CalculateurIMC {
             System.out.println("Surpoids");
         } else {
             System.out.println("Obésité");
-        }
+        } */
 
         clavier.close();
     }
