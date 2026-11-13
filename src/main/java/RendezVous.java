@@ -27,6 +27,6 @@ public class RendezVous {
 
     public void afficher() {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy HH'h'mm");
-        System.out.println(dateHeure.format(format) + " - " + patient.getPrenom() + " " + patient.getNom() + " avec " + medecin.getNom() + " ("+  medecin.getSpecialite()+ ")");
+        System.out.println(dateHeure.format(format) + " - " + patient.getPrenom() + " " + patient.getNom() + " avec Dr " + medecin.getNom() + " ("+  medecin.getSpecialite()+ ")");
     }
 }

@@ -6,5 +6,51 @@ public class Cabinet {
         Medecin jacques = new Medecin("Jacques", "Cardiologie");
         RendezVous rdv = new RendezVous(marie, jacques, LocalDateTime.of(2026, 11, 12, 14, 30));
         rdv.afficher();
+
+        Medecin lise = new Medecin("Lise", "Gynécologie");
+        Medecin laure = new Medecin("Laure", "Généraliste");
+        Patient homer = new Patient("Homer", "Hervey", 15, "A+");
+        Patient link = new Patient("Link", "Kokiri", 25, "O-");
+
+        Agenda agenda = new Agenda();
+
+        RendezVous rdv1 = new RendezVous(link, lise, LocalDateTime.of(2026, 11, 13, 14, 30));
+        if (agenda.ajouterRendezVous(rdv1)) {
+            System.out.println("Rendez-vous enregistré.");
+        } else {
+            System.out.println("Créneau indisponible.");
+        }
+
+        RendezVous rdv2 = new RendezVous(homer, lise, LocalDateTime.of(2026, 11, 13, 14, 30));
+        if (agenda.ajouterRendezVous(rdv2)) {
+            System.out.println("Rendez-vous enregistré.");
+        } else {
+            System.out.println("Créneau indisponible.");
+        }
+
+        RendezVous rdv3 = new RendezVous(homer, laure, LocalDateTime.of(2026, 11, 13, 15, 30));
+        if (agenda.ajouterRendezVous(rdv3)) {
+            System.out.println("Rendez-vous enregistré.");
+        } else {
+            System.out.println("Créneau indisponible.");
+        }
+
+        RendezVous rdv4 = new RendezVous(homer, laure, LocalDateTime.of(2026, 11, 13, 14, 30));
+        if (agenda.ajouterRendezVous(rdv4)) {
+            System.out.println("Rendez-vous enregistré.");
+        } else {
+            System.out.println("Créneau indisponible.");
+        }
+
+        RendezVous rdv5 = new RendezVous(homer, jacques, LocalDateTime.of(2026, 11, 13, 15, 30));
+        if (agenda.ajouterRendezVous(rdv5)) {
+            System.out.println("Rendez-vous enregistré.");
+        } else {
+            System.out.println("Créneau indisponible.");
+        }
+
+        System.out.println();
+        agenda.afficher();
+
     }
 }
