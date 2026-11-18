@@ -13,7 +13,7 @@ Mon parcours d'apprentissage Java : 12 étapes progressives appliquées au secte
 | 5 | Gestionnaire de patients | classes et objets | Terminé |
 | 6 | Rappel de médicaments | dates et heures | Terminé |
 | 7 | Tests unitaires | Maven, JUnit | Terminé |
-| 8 | Prise de rendez-vous | relations entre classes, `HashMap` | En cours |
+| 8 | Prise de rendez-vous | relations entre classes, `HashMap` | Terminé |
 | 9 | Carnet de santé | fichiers, exceptions | À venir |
 | 10 | Triage aux urgences | `PriorityQueue`, `Comparable` | À venir |
 | 11 | Stock de pharmacie | héritage, interfaces, base de données | À venir |
@@ -46,6 +46,10 @@ Un programme permettant aux patients de suivre l'heure de prise de leurs médica
 ## Étape 7 : Tests unitaires
 
 Le projet a été réorganisé avec Maven, et des tests automatiques écrits avec JUnit vérifient le bon fonctionnement du code : les conversions médicales, le calcul et les catégories de l'IMC (y compris les valeurs limites), et la validation de l'âge des patients.
+
+## Projet 8 : Prise de rendez-vous
+
+Un programme permettant la prise de rendez-vous avec le médecin choisi. Chaque rendez-vous associe un patient, un médecin et une date-heure. L'agenda refuse automatiquement les doubles réservations : un médecin ne peut pas recevoir deux patients en même temps, et un patient ne peut pas avoir deux rendez-vous au même moment. Le médecin est retrouvé par son nom, sans tenir compte des majuscules, et les règles de l'agenda sont vérifiées par des tests unitaires.
 
 ## Organisation du projet
 
