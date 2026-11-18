@@ -1,7 +1,10 @@
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Scanner;
 
 public class Cabinet {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Patient marie = new Patient("Marie", "Dupond", 45, "A+");
         Medecin jacques = new Medecin("Jacques", "Cardiologie");
         RendezVous rdv = new RendezVous(marie, jacques, LocalDateTime.of(2026, 11, 12, 14, 30));
@@ -49,8 +52,31 @@ public class Cabinet {
             System.out.println("Créneau indisponible.");
         }
 
+        HashMap<String, Medecin> medecins = new HashMap<>();
+
+        medecins.put("lise", lise);
+        medecins.put("laure", laure);
+        medecins.put("jacques", jacques);
+
+        System.out.print("Avec quel médecin souhaitez-vous un rendez-vous ? ");
+        String nomMedecin = scanner.next();
+        Medecin medecinChoisi =  medecins.get(nomMedecin.toLowerCase());
+
+        if (medecinChoisi == null) {
+            System.out.println("Médecin inconnu");
+        } else {
+            RendezVous rdv6 = new RendezVous(link, medecinChoisi, LocalDateTime.of(2026, 11, 18, 14, 0));
+
+            if (agenda.ajouterRendezVous(rdv6)){
+                System.out.println("Rendez-vous enregistré.");
+            } else {
+                System.out.println("Créneau indisponible.");
+            }
+        }
+
         System.out.println();
         agenda.afficher();
+        scanner.close();
 
     }
 }
