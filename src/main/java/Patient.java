@@ -28,7 +28,7 @@ public class Patient {
         }
     }
 
-    public Patient(String prenom, String nom, int age, String groupeSanguin) {
+    public Patient(String prenom, String nom, int age, String groupeSanguin) { //construteur
         this.prenom = prenom;
         this.nom = nom;
         setAge(age);
