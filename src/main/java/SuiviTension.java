@@ -4,13 +4,17 @@ import java.util.Scanner;
 public class SuiviTension {
 
     public static String categorieTension(int systolique, int diastolique) {
-        // ===== 4. Affichage des mesures =====
+
+            if (diastolique >= systolique || (systolique >= 140 && diastolique < 60)) {
+                return "Mesure à vérifier";
+            }
+
             if (systolique >= 140 || diastolique >= 90) {
-                return ("Tension élevée");
+                return "Tension élevée";
             } else if (systolique < 90 || diastolique < 60) {
-                return ("Tension basse");
+                return "Tension basse";
             } else {
-                return ("Tension normale");
+                return "Tension normale";
             }
         }
 
