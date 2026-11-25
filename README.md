@@ -33,7 +33,9 @@ L'utilisateur saisit son sexe, son âge, son poids et sa taille. Le programme ca
 
 ## Projet 4 : Suivi de tension artérielle
 
-L'utilisateur peut suivre sa tension artérielle avec un programme qui lui permet de saisir autant de mesures qu'il le souhaite. Pour chaque mesure, le programme indique si la tension est normale, élevée ou basse, puis affiche la moyenne, le maximum et le minimum de la pression systolique.
+## Projet 4 : Suivi de tension artérielle
+
+L'utilisateur peut suivre sa tension artérielle avec un programme qui lui permet de saisir autant de mesures qu'il le souhaite. Pour chaque mesure, le programme indique si la tension est normale, élevée ou basse, et signale les mesures incohérentes à vérifier, comme une diastolique supérieure à la systolique ou un écart anormal entre les deux valeurs. Il affiche ensuite la moyenne, le maximum et le minimum de la pression systolique. Le classement des mesures est vérifié par des tests unitaires, y compris pour les valeurs limites.
 
 ## Projet 5 : Gestionnaire de patients
 
