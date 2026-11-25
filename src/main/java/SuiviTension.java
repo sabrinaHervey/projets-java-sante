@@ -3,6 +3,22 @@ import java.util.Scanner;
 
 public class SuiviTension {
 
+    public static String categorieTension(int systolique, int diastolique) {
+
+            if (diastolique >= systolique || (systolique >= 140 && diastolique < 60)) {
+                return "Mesure à vérifier";
+            }
+
+            if (systolique >= 140 || diastolique >= 90) {
+                return "Tension élevée";
+            } else if (systolique < 90 || diastolique < 60) {
+                return "Tension basse";
+            } else {
+                return "Tension normale";
+            }
+        }
+
+
     public static void main(String[] args) {
         Scanner clavier = new Scanner(System.in);
 
@@ -36,18 +52,11 @@ public class SuiviTension {
             clavier.close();
             return;
         }
-        // ===== 4. Affichage des mesures =====
+         // ===== 4. Affichage des mesures =====
         for (int i = 0; i < systoliques.size(); i++) {
             System.out.print("Jour " + (i + 1) + " : " + systoliques.get(i) + "/" + diastoliques.get(i) + " mmHg - ");
-
-            if (systoliques.get(i) >= 140 || diastoliques.get(i) >= 90) {
-                System.out.println("Tension élevée");
-            } else if (systoliques.get(i) < 90 || diastoliques.get(i) < 60) {
-                System.out.println("Tension basse");
-            } else {
-                System.out.println("Tension normale");
-            }
-        }
+            System.out.println(categorieTension(systoliques.get(i), diastoliques.get(i)));
+        } 
 
         // ===== 5. Statistiques (systolique) =====
         int somme = 0;
